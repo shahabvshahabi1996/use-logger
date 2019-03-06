@@ -1,0 +1,16 @@
+{
+  "name": "uselogger",
+  "version": "1.0.0",
+  "description": "This is a package for logging on browsers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "UseLogger",
+    "console",
+    "log"
+  ],
+  "author": "Alireza Shahabi",
+  "license": "MIT"
+}
