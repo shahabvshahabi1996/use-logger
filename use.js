@@ -66,46 +66,51 @@ class UseLogger {
     }
 
     custom(tag,title,data) {
-        switch(tag) {
-            case "success" : {
-                console.log(`%c${title}`,styles[tag]);
-                if(data) {
-                    console.log(data);
-                    return;
-                } else {
-                    return;
+        if(typeof title === "string") {
+
+            switch(tag) {
+                case "success" : {
+                    console.log(`%c${title}`,styles[tag]);
+                    if(data) {
+                        console.log(data);
+                        return;
+                    } else {
+                        return;
+                    }
+                }
+                case "warning" : {
+                    console.log(`%c${title}`,styles[tag]);
+                    if(data) {
+                        console.log(data);
+                        return;
+                    } else {
+                        return;
+                    }
+                }
+                case "info" : {
+                    console.log(`%c${title}`,styles[tag]);
+                    if(data) {
+                        console.log(data);
+                        return;
+                    } else {
+                        return;
+                    }
+                }
+                case "error" : {
+                    console.log(`%c${title}`,styles[tag]);
+                    if(data) {
+                        console.log(data);
+                        return;
+                    } else {
+                        return;
+                    }
+                }
+                default : {
+                    throw new Error('Please choose a tag between "success,warning,error,info"');
                 }
             }
-            case "warning" : {
-                console.log(`%c${title}`,styles[tag]);
-                if(data) {
-                    console.log(data);
-                    return;
-                } else {
-                    return;
-                }
-            }
-            case "info" : {
-                console.log(`%c${title}`,styles[tag]);
-                if(data) {
-                    console.log(data);
-                    return;
-                } else {
-                    return;
-                }
-            }
-            case "error" : {
-                console.log(`%c${title}`,styles[tag]);
-                if(data) {
-                    console.log(data);
-                    return;
-                } else {
-                    return;
-                }
-            }
-            default : {
-                throw new Error('Please choose a tag between "success,warning,error,info"');
-            }
+        } else {
+            throw new Error('Your title must be in string!');
         }
     }
 }
